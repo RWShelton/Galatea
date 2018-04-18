@@ -1,7 +1,5 @@
-// Variables
-
-// Restated Bootstrap Variables
-
+// Color Variables
+// Bootstrap Color Defaults
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -25,11 +23,12 @@ $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-800 !default;
+// Spacing Variables
+// Change below variable if the height of the navbar changes
+$navbar-base-height: 56px;
+// Change below variable to change the width of the sidenav
+$sidenav-base-width: 250px;
+// Change below variable to change the width of the sidenav when collapsed
+$sidenav-collapsed-width: 55px;
+// Change below variable to change the height of the sticky footer
+$sticky-footer-height: 56px;

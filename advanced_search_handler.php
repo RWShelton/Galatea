@@ -1,36 +1,9 @@
 <?php
 session_start();
+include 'header_footer_functions.php';
+header_function();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Search for Scholarship</title>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <!-- Custom styles for this template -->
-    <link href="css/landing-page.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-  </head>
-  <body>
-    <header class="almost-masthead text-white text-center">
-            <h1 class="mb-0 pb-0">Scholarship in Classical Receptions in SF & Fantasy</h1>
-    </header>
-      <!-- Navigation -->
-    <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.php">Search</a>
-      <!--<a class="btn btn-primary" href="#">Sign In</a>-->
-        <a class="navbar-brand" href="contactUs.php">Contact Us & Suggest Scholarship</a>
-      </div>
-    </nav>
+
 
     <!-- Image Showcases -->
     <section class="showcase">
@@ -422,7 +395,7 @@ foreach($results as $row) {
               </div>
             </div>";
     } else {
-          echo  "<div class=\"row justify-content-lgcenter pb-0 pt-0\">
+          echo  "<div class=\"row justify-content-lgcenter pb-0 pt-0\" style=\"margin-left:20px\">
                   <div class=\"col-md-12 pb-0 pt-0 my-auto showcase-text\">
                     <p class=\"lead pb-0 pt-0\">" . $toPrint . "</p>
                     </div>
@@ -593,9 +566,9 @@ foreach ($sourceResults as $row) {
               </div>
             </div>";
     } else {
-          echo  "<div class=\"row justify-content-lgcenter pb-0 pt-0\">
-                  <div class=\"col-md-12 pb-0 pt-0 my-auto showcase-text\">
-                    <p class=\"lead pb-0 pt-0\">" . $toPrint . "</p>
+          echo  "<div class=\"row justify-content-lgcenter\">
+                  <div class=\"col-12 col-md-12 pb-0 pt-0 my-auto showcase-text\" style=\"margin-left:10px\" >
+                    <p class=\"lead pb-0 pt-0\" >" . $toPrint . "</p>
                     </div>
                 </div>";
     }
@@ -615,60 +588,9 @@ catch(PDOException $e)
 </section>
 
 <!-- Footer -->
-   <footer class="footer bg-light">
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-                   <ul class="list-inline mb-2">
-                       <!-- <li class="list-inline-item">
-                           <a href="#">About</a>
-                       </li> -->
-                       <!-- <li class="list-inline-item">&sdot;</li> -->
-                       <li class="list-inline-item">
-                           <a href="contactUs.php">Contact</a>
-                       </li>
-                       <!-- <li class="list-inline-item">&sdot;</li> -->
-                       <!-- <li class="list-inline-item">
-                           <a href="#">Terms of Use</a>
-                       </li> -->
-                       <li class="list-inline-item">&sdot;</li>
-                       <li class="list-inline-item">
-                           <a href="login_page.php">Administration</a>
-                       </li>
-                       <?php
-                                   if (isset($_SESSION["sessionID"])){
-                                       echo "<li class=\"list-inline-item\">&sdot;</li>
-                                                   <li class=\"list-inline-item\"><a href=\"logout.php\">Logout</a></li>
-                                                   <li class=\"list-inline-item\">&sdot;</li>
-                                                   <li class=\"list-inline-item\"><a href=\"addCitation.php\">Add Citation</a></li>
-                                                   <li class=\"list-inline-item\">&sdot;</li>
-                                                   <li class=\"list-inline-item\"><a href=\"create_account.php\">Create New Account</a></li>";
-                                   }
-                       ?>
-                   </ul>
-               </div>
-               <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-                   <ul class="list-inline mb-0">
-                       <li class="list-inline-item mr-3">
-                           <a href="https://www.facebook.com/ClassicalTraditionsScienceFiction/">
-                               <i class="fa fa-facebook fa-2x fa-fw"></i>
-                           </a>
-                       </li>
-                       <li class="list-inline-item mr-3">
-                           <a href="https://twitter.com/CTSFMF">
-                               <i class="fa fa-twitter fa-2x fa-fw"></i>
-                           </a>
-                       </li>
-                       <li class="list-inline-item mr-3">
-                           <a href="https://www.facebook.com/classicaltraditionsinmodernfantasy/">
-                               <i class="fa fa-facebook fa-2x fa-fw"></i>
-                           </a>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </footer>
+<?php
+  footer_function();
+  ?>
    <!-- Bootstrap core JavaScript -->
    <script src="vendor/jquery/jquery.min.js"></script>
    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
